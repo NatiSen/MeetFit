@@ -1,81 +1,147 @@
-# WebApp boilerplate with React JS and Flask API
+<div align="center">
+<img src="src/front/assets/img/logofooter.png" alt="MeetFit Logo" width="150"/>
+  <h1 style="color:#FF6B6B; font-family:'Poppins', sans-serif;">MeetFit</h1>
 
-Build web applications using React.js for the front end and python/flask for your backend API.
 
-- Documentation can be found here: https://4geeks.com/docs/start/react-flask-template
-- Here is a video on [how to use this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b)
-- Integrated with Pipenv for package managing.
-- Fast deployment to Render [in just a few steps here](https://4geeks.com/docs/start/deploy-to-render-com).
-- Use of .env file.
-- SQLAlchemy integration for database abstraction.
+  Sport • Connect • Explore
 
-### 1) Installation:
+  Social Sport App
+  
+ <br>
+</div>
+MeetFit is an application designed to connect people through sports.
+It allows users to search, create, and join sport activities nearby — from running, yoga, and fitness to climbing, cycling, or team sports.
 
-> If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10, Node 
+MeetFit helps active individuals to:
 
-It is recomended to install the backend first, make sure you have Python 3.10, Pipenv and a database engine (Posgress recomended)
+- find workout partners,
 
-1. Install the python packages: `$ pipenv install`
-2. Create a .env file based on the .env.example: `$ cp .env.example .env`
-3. Install your database engine and create your database, depending on your database you have to create a DATABASE_URL variable with one of the possible values, make sure you replace the valudes with your database information:
+- stay motivated,
 
-| Engine    | DATABASE_URL                                        |
-| --------- | --------------------------------------------------- |
-| SQLite    | sqlite:////test.db                                  |
-| MySQL     | mysql://username:password@localhost:port/example    |
-| Postgress | postgres://username:password@localhost:5432/example |
+- discover new ways to be active,
 
-4. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
-5. Run the migrations: `$ pipenv run upgrade`
-6. Run the application: `$ pipenv run start`
+- build connections based on shared interests.
 
-> Note: Codespaces users can connect to psql by typing: `psql -h localhost -U gitpod example`
+We believe that exercising is easier, more enjoyable, and more motivating when you do it with others.
+MeetFit exists to bring people together through movement, community, and shared sports experiences.
 
-### Undo a migration
+<br>
+<hr style="height: 1px;border:none;background-color:#FF6B6B;margin:20px 0;" />
+<br>
 
-You are also able to undo a migration by running
+## Key Features
 
-```sh
-$ pipenv run downgrade
-```
+✔️ Robust Architecture: Full-stack application powered by React + Flask, delivering fast, reliable performance.
 
-### Backend Populate Table Users
+✔️ Interactive Map: Google Maps integration to explore, create, and join activities around you.
 
-To insert test users in the database execute the following command:
+✔️ User System: Complete authentication flow with login, registration, password recovery, JWT protection, and editable user profiles.
 
-```sh
-$ flask insert-test-users 5
-```
+✔️ Activity Management: Create events, join others, manage your own activities, view joined activities, and track ratings.
 
-And you will see the following message:
+✔️ Activity Ratings: Interactive 1–5 star rating system with personalized feedback tools.
 
-```
-  Creating test users
-  test_user1@test.com created.
-  test_user2@test.com created.
-  test_user3@test.com created.
-  test_user4@test.com created.
-  test_user5@test.com created.
-  Users created successfully!
-```
+✔️ Modern UI: Neon-style design, dynamic quotes, animated splash screens, responsive components, and toast notifications.
 
-### **Important note for the database and the data inside it**
+✔️ Fully Responsive: Optimized for mobile, tablet, and desktop experiences.
 
-Every Github codespace environment will have **its own database**, so if you're working with more people eveyone will have a different database and different records inside it. This data **will be lost**, so don't spend too much time manually creating records for testing, instead, you can automate adding records to your database by editing ```commands.py``` file inside ```/src/api``` folder. Edit line 32 function ```insert_test_data``` to insert the data according to your model (use the function ```insert_test_users``` above as an example). Then, all you need to do is run ```pipenv run insert-test-data```.
 
-### Front-End Manual Installation:
+<hr style="border: 2px solid #E3FE18;">
+<br>
 
--   Make sure you are using node version 20 and that you have already successfully installed and runned the backend.
+## Technologies Used
 
-1. Install the packages: `$ npm install`
-2. Start coding! start the webpack dev server `$ npm run start`
+### ❀  Frontend
 
-## Publish your website!
+- ⚛️ React.js — Components, routing, and UI architecture
+- 🌍 Google Maps API — Real-time interactive map
+- 🎨 CSS3 / Custom UI — Neon styles, responsive layouts
+- 🔔 React Toastify — Notifications
+- 📦 Context / Local State — State management
+- 🔧 Vite — Fast development server
 
-This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://4geeks.com/docs/start/deploy-to-render-com).
+### ❀  Backend
 
-### Contributors
+- 🐍 Python — Server logic
+- 🌐 Flask — Routing, authentication, mailing
+- 🗄️ SQLAlchemy — Database ORM
+- 💾 PostgreSQL — Storage for users, activities, ratings
+- 🔐 JWT — Secure authentication
+- ✉️ Flask-Mail — Password recovery emails
+- 🗺️ Google Maps integration — Coordinates-based events
 
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
+### ❀  State & Data Management
 
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+- Global state via React (store.js)
+- Custom API services (auth.js, user.js, activity handlers)
+- Live updates on new activities
+  
+
+<hr style="border: 2px solid #E3FE18;">
+<br>
+
+## Core Components
+
+🔐 Authentication & User System
+
+- User registration & login
+- Forgot password (email)
+- Password reset with secure token
+- JWT authentication
+- Protected routes
+- User profile view (User.jsx)
+- Edit user details (UpdateUser.jsx)
+- AuthShell — consistent layout for auth pages
+
+🗺️ Interactive Map (Google Maps API)
+
+- Powered by @react-google-maps/api.
+- Shows all nearby sport activities
+- Click on the map to create a new event
+- Markers with InfoWindows showing event details
+- Automatic user geolocation
+- Animated onboarding tips (first-time help)
+- Real-time updating after event creation
+
+🤸 Activities System
+
+- Create new sport activities
+- Choose title, sport, description, location, max participants, date
+- Join or leave activities
+- View joined or created events
+- Live reload after event changes
+- Fallback events when backend is offline
+- Activity rating system (1–5 stars)
+- Dynamic sport icons & images
+
+✨ UI & Experience
+
+- Home splash screen
+- Motivational quotes system
+- Modern neon-style UI components
+- Toast notifications for all actions
+- ScrollToTop navigation
+- Dual navigation bars:
+- Public Navbar
+- Internal Navbar (after login)
+
+<br>
+
+## Planned Features
+💭 Real-time Chat
+- Live chat inside each activity using WebSockets / Socket.io.
+
+👥 Follow System
+- Follow users, get social recommendations, see friends’ activities.
+
+🛎️ Push Notifications
+ - Event reminders
+ - Followers
+ - Joins
+ - Activity changes
+
+<hr style="border: 2px solid #E3FE18;">
+<br>
+
+## 🔗 Check it out!
+
